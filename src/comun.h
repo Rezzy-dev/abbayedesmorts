@@ -3,7 +3,7 @@
 #ifndef _COMUN_H_
 #define _COMUN_H_
 
-#if defined(_OPENPANDORA) || defined (_GCW_ZERO) || defined (_WII)
+#if defined(_OPENPANDORA) || defined (_GCW_ZERO) || defined (_WII) || defined (_BITTBOY)
 /* La versión para OpenPandora usa rutas relativas */
 #define _RUTAS_RELATIVAS
 /* La versión para OpenPandora renderiza internamente a 320x240 */
@@ -162,6 +162,12 @@
   #define KEY_START                SDLK_RETURN
   #define KEY_GRAPHICS             SDLK_LALT
   #define KEY_INFO                 SDLK_SPACE
+
+#elif defined(_BITTBOY)
+  #define KEY_JUMP                 SDLK_LCTRL
+  #define KEY_START                SDLK_RETURN
+  #define KEY_GRAPHICS             SDLK_LSHIFT
+  #define KEY_INFO                 SDLK_LALT
 
 #elif defined(_WII)
   #undef RUTA_GRA_INTRO
