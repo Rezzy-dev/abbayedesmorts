@@ -26,10 +26,10 @@ ifeq ($(PLATFORM),gcw0)
     CC     = mipsel-linux-gcc
     CFLAGS += -mips32 -D_GCW_ZERO
 else ifeq ($(PLATFORM),bittboy)
-    CC     = arm-linux-gcc
-    CFLAGS += -D_BITTBOY
-    SDL_CFLAGS := `/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/bin/sdl-config --cflags`
-    SDL_LIBS   := `/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/bin/sdl-config --libs`
+    CC     = /opt/miyoo-toolchain-old/bin/arm-linux-gcc
+    CFLAGS += -D_BITTBOY -I/opt/miyoo-toolchain-old/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/include/SDL
+    SDL_CFLAGS := `/opt/miyoo-toolchain-old/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/bin/sdl-config --cflags`
+    SDL_LIBS   := `/opt/miyoo-toolchain-old/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/bin/sdl-config --libs`
 else ifeq ($(PLATFORM),pandora)
     NAME   = abbaye-pandora
     CC     = $(PREFIX)gcc
