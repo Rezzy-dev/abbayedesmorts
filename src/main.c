@@ -1289,7 +1289,7 @@ void tecladoj (struct protagonista *jean, int *tecla) {
 				*tecla = 6;
 			if (evento.key.keysym.sym == KEY_GRAPHICS)
 				*tecla = 9;
-	   	if (evento.key.keysym.sym == SDLK_ESCAPE)
+	   	if (evento.key.keysym.sym == SDLK_RCTRL)
       		exit(0);
 		}
 
@@ -1369,7 +1369,7 @@ void teclado (int *tecla, int fase) {
       		if (fase == 1)
 						*tecla = 7;
 			}
-	   	if (evento.key.keysym.sym == SDLK_ESCAPE)
+	   	if (evento.key.keysym.sym == SDLK_RCTRL)
       		exit(0);
 			if (evento.key.keysym.sym == SDLK_f)
 				*tecla = 6;
